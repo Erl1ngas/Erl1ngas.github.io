@@ -1,10 +1,15 @@
 header{
     font-family: 'IBM Plex Serif', serif;
 }
+.header-principal{
+    display: flex;
+    justify-content: space-between;
+    background: var(--clr);
+}
 .logo{
     width: 30%;
-    margin-left: 10px;
-    padding: 10px;
+    margin-left: 10%;
+    padding: 0;
 }
 .lista-activa{
     margin:0;
@@ -13,21 +18,26 @@ header{
     font-family: 'IBM Plex Serif', serif;
 }
 :root{
-    --clr: #222327;
+    --clr: #000000;
 
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--clr);
+
+.contenedor-externo{
+    position: relative;
+    right: 10%;
+    bottom: 0%;
+    padding-top: 210px;
+
+    
+    height: 100px;
 
 }
+
 .container{
     width: 400px;
     height: 70px;
     background: #FFF;
+    
     position: relative;
     display: flex;
     justify-content: center;
@@ -84,15 +94,17 @@ body{
 }
 .indicador{
   position: absolute;
-  top: -50%;
+  top: -60%;
+  right: 75%;
   width: 70px;
   height: 70px;
-  background: yellow;
+  background: lightgreen;
   border-radius: 50%;
   border: 6px solid var(--clr);
+  transition: 0.5s;
 }
 .indicador::before{
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: -20px;
@@ -112,4 +124,19 @@ body{
     background: transparent;
     border-top-left-radius: 20px;
     box-shadow: 0px -10px 0 0 var(--clr);
+}
+.container ul li:nth-child(1).activa ~ .indicador{
+    transform: translateX(calc(70px * 0));
+}
+.container ul li:nth-child(2).activa ~ .indicador{
+    transform: translateX(calc(70px * 1));
+}
+.container ul li:nth-child(3).activa ~ .indicador{
+    transform: translateX(calc(70px * 2));
+}
+.container ul li:nth-child(4).activa ~ .indicador{
+    transform: translateX(calc(70px * 3));
+}
+.container ul li:nth-child(5).activa ~ .indicador{
+    transform: translateX(calc(70px * 4));
 }
