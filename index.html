@@ -7,73 +7,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/flexbox.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerStyle.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script href="JS/principal.js"></script>
-    <script href="JS/navegador.js"></script>
+    <script type="text/javascript" src="JS/principal.js"></script>
+    <script type="text/javascript" src="JS/navegador.js"></script>
     <title>Erlingas</title>
 </head>
 
 <body>
     <header class="header-principal">
-        <h1><img class="logo" src="images/logo1.png"></h1>
+        <h1><a href="index.html"><img class="logo" src="images/logo1.png"></a></h1>
 
         <div class="contenedor-externo">
+
             <div class="container">
 
-                <nav>
-                    <ul>
-                        <li class="lista-activa">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                </span>
-                                <span class="text">home</span>
-                            </a>
-                        </li>
-                        <li class="lista">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="school-outline"></ion-icon>
-                                </span>
-                                <span class="text">Sklils</span>
-                            </a>
-                        </li>
-                        <li class="lista">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="game-controller-outline"></ion-icon>
-                                </span>
-                                <span class="text">Hobbies</span>
-                            </a>
-                        </li>
-                        <li class="lista">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="medal-outline"></ion-icon>
-                                </span>
-                                <span class="text">Formacion</span>
-                            </a>
-                        </li>
-                        <li class="lista">
-                            <a href="#">
-                                <span class="icon">
-                                    <ion-icon name="bulb-outline"></ion-icon>
-                                </span>
-                                <span class="text">Proyectos</span>
-                            </a>
-                        </li>
-                        <div class="indicador"></div>
-                    </ul>
-                </nav>
+
+                <ul>
+                    <li class="lista activa">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text">home</span>
+                        </a>
+                    </li>
+                    <li class="lista">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </span>
+                            <span class="text">Sklils</span>
+                        </a>
+                    </li>
+                    <li class="lista">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="game-controller-outline"></ion-icon>
+                            </span>
+                            <span class="text">Hobbies</span>
+                        </a>
+                    </li>
+                    <li class="lista">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="medal-outline"></ion-icon>
+                            </span>
+                            <span class="text">Formacion</span>
+                        </a>
+                    </li>
+                    <li class="lista">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="bulb-outline"></ion-icon>
+                            </span>
+                            <span class="text">Proyectos</span>
+                        </a>
+                    </li>
+                    <div class="indicador"></div>
+                </ul>
+
 
             </div>
         </div>
+        <div class="posicion-redes">
+            <span class="etiqueta-redes">Follow me on</span>
+
+            <span class="listado-redes">
+                <a href="https://www.linkedin.com/in/german-gonzalez-3216421a2" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/germanico_s/?hl=es" class="fa fa-instagram"></a>
+                <a href="https://www.facebook.com/profile.php?id=100016665042204" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/IgnacioErlingas" class="fa fa-twitter"></a>
+            </span>
+        </div>
+        <script>
+            const lista = document.querySelectorAll(".lista");
+
+            function activeLink() {
+                lista.forEach((item) => item.classList.remove("activa"));
+                this.classList.add("activa");
+            }
+            lista.forEach((item) => item.addEventListener("mouseover", activeLink));
+        </script>
     </header>
 </body>
-<main>
+<main class="main-principal">
     <p>Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido.
         También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que,
         aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras

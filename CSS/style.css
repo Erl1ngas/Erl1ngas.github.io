@@ -1,142 +1,31 @@
-header{
-    font-family: 'IBM Plex Serif', serif;
+.main-principal p{
+    line-height: 2.5em;
+    text-align: justify;
 }
-.header-principal{
-    display: flex;
-    justify-content: space-between;
-    background: var(--clr);
-}
-.logo{
-    width: 30%;
-    margin-left: 10%;
-    padding: 0;
-}
-.lista-activa{
-    margin:0;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Serif', serif;
-}
-:root{
-    --clr: #000000;
-
-}
-
-.contenedor-externo{
-    position: relative;
-    right: 10%;
-    bottom: 0%;
-    padding-top: 210px;
-
-    
-    height: 100px;
-
-}
-
-.container{
-    width: 400px;
-    height: 70px;
-    background: #FFF;
-    
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-.container ul{
-    display: flex;
-    width: 350px;
-}
-.container ul li{
-    position: relative;
-    list-style: none;
-    width: 70px;
-    height: 70px;
-    z-index: 1;
-}
-.container ul li a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-}
-.container ul li a .icon{
-    position: relative;
-    display: block;
-    line-height: 75px;
-    font-size: 1.5em;
-    text-align: center;
-    transition: 0.5s;
-    color: var(--clr);
-}
-.container ul li.activa a .icon{
-    transform: translateY(-32px);
-
-}
-.container ul li a .text{
-    position: absolute;
-    color: var(--clr);
-    font-weight: 400;
-    font-size: 0.75em;
-    letter-spacing: 0.05em;
-    transition: 0.5s;
-    opacity: 0;
-    transform: translateY(20px);
-}
-.container ul li.activa a .text{
-    opacity: 1;
-    transform: translateY(10px);
-}
-.indicador{
+.header-principal .posicion-redes{
   position: absolute;
-  top: -60%;
-  right: 75%;
-  width: 70px;
-  height: 70px;
-  background: lightgreen;
-  border-radius: 50%;
-  border: 6px solid var(--clr);
-  transition: 0.5s;
+    top:20px;
+    right: 90px;
+    margin: 5px;
+
 }
-.indicador::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -20px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-right-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+.etiqueta-redes{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 25px;
+    
 }
-.indicador::after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border-top-left-radius: 20px;
-    box-shadow: 0px -10px 0 0 var(--clr);
+body{
+    background-color: #0C96F9;
 }
-.container ul li:nth-child(1).activa ~ .indicador{
-    transform: translateX(calc(70px * 0));
+
+.listado-redes .fa {
+    margin-left: 15px;
+    padding: 3px;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px;
 }
-.container ul li:nth-child(2).activa ~ .indicador{
-    transform: translateX(calc(70px * 1));
-}
-.container ul li:nth-child(3).activa ~ .indicador{
-    transform: translateX(calc(70px * 2));
-}
-.container ul li:nth-child(4).activa ~ .indicador{
-    transform: translateX(calc(70px * 3));
-}
-.container ul li:nth-child(5).activa ~ .indicador{
-    transform: translateX(calc(70px * 4));
+.fa:hover{
+    color: #0C96F9;
 }
