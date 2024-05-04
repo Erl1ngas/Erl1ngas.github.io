@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1.0">
+
+        <link rel="stylesheet" href="estilos.css">
+        <title>ENCABEZADO responsive</title>
+
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="logo.png" alt="logo de la compañia">
+			<h2 class="nombre-empresa">Germany Airlines</h2>
+		</div>
+		<nav>
+				<a href=""class="nav-link">Inicio</a>
+				<a href=""class="nav-link">Sobre Nosotros</a>
+				<a href=""class="nav-link">Contacto</a>
+		</nav>
+		
+	</header>
+	
+	<div id="container">
+        <h2>Ingrese un número de seguimiento proporcionado:</h2>
+        <input type="text" id="numero" placeholder="Ingrese el número aquí">
+        <br>
+        <button onclick="verificarNumero()">Verificar</button>
+    </div>
+
+
+</body>
+
+<script>
+        function verificarNumero() {
+            var numeroIngresado = document.getElementById("numero").value;
+            if (numeroIngresado === "1164582001") {
+                window.location.href = "GermanyAirlines.html";
+            } else {
+                alert("El número ingresado no es correcto. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</html>
